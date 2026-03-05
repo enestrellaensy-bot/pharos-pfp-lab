@@ -332,16 +332,26 @@ color:#cfd6e3;
 @media (max-width:768px){
 
 .header-inner{
-flex-direction:column;
-gap:12px;
-padding:18px 10px;
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+padding:14px 16px;
+
 }
 
 .title{
+
 position:static;
 transform:none;
-font-size:28px;
+
+font-size:22px;
+
 text-align:center;
+
+flex:1;
+
 }
 
 .header-buttons{
@@ -366,17 +376,16 @@ padding:15px;
 
 .logo{
 
-position:absolute;
+position:static;
 
-left:15px;
-top:50%;
+height:42px;
+width:42px;
 
-transform:translateY(-50%);
+transform:none;
 
-height:46px;
-width:46px;
+margin-right:10px;
 
-}  
+}
 /* стрелки внутрь */
 
 .left{
