@@ -61,6 +61,7 @@ cursor:pointer;
 }
 
 .logo{
+
 position:absolute;
 left:30px;
 
@@ -79,10 +80,8 @@ box-shadow:
 
 animation:logoPulse 2s infinite;
 
-will-change:transform;
-transform-style:preserve-3d;
-
 cursor:pointer;
+
 }
 
 /* HEADER LINE */
@@ -334,15 +333,33 @@ color:#cfd6e3;
 @keyframes logoPulse{
 
 0%{
+
 transform:translateY(-50%) scale(1);
+
+box-shadow:
+0 0 10px rgba(180,220,255,0.35),
+0 0 25px rgba(180,220,255,0.25);
+
 }
 
 50%{
+
 transform:translateY(-50%) scale(1.08);
+
+box-shadow:
+0 0 25px rgba(180,220,255,0.7),
+0 0 60px rgba(180,220,255,0.5);
+
 }
 
 100%{
+
 transform:translateY(-50%) scale(1);
+
+box-shadow:
+0 0 10px rgba(180,220,255,0.35),
+0 0 25px rgba(180,220,255,0.25);
+
 }
 
 }
@@ -365,12 +382,10 @@ padding:14px 16px;
 }
 
 .logo{
-position: static;
-height: 60px;
-width: 60px;
-margin-right: 10px;
-
-top:auto;
+position:static;
+height:60px;
+width:60px;
+margin-right:10px;
 }
 
 .title{
