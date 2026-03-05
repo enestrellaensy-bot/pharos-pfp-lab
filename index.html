@@ -84,33 +84,51 @@ text-shadow:
 /* TWITTER BUTTON */
 
 .header-buttons a{
-color:white;
+
+color:#eaf1ff;
 text-decoration:none;
 
-padding:14px 32px;
-font-size:18px;
+font-family:'Orbitron', sans-serif;
+font-size:20px;
+font-weight:600;
+letter-spacing:1px;
 
-border-radius:14px;
+padding:16px 42px;
 
-background:rgba(255,255,255,0.12);
-border:1px solid rgba(255,255,255,0.25);
+border-radius:18px;
+
+background:linear-gradient(
+135deg,
+rgba(120,140,255,0.25),
+rgba(180,220,255,0.25)
+);
+
+border:1px solid rgba(200,220,255,0.45);
 
 backdrop-filter:blur(10px);
+
+box-shadow:
+0 0 12px rgba(140,160,255,0.25),
+0 0 30px rgba(140,160,255,0.15);
 
 transition:0.25s;
 }
 
 .header-buttons a:hover{
 
-background:rgba(255,255,255,0.25);
+transform:translateY(-3px);
 
 box-shadow:
-0 0 20px rgba(255,255,255,0.35),
-0 0 40px rgba(180,220,255,0.35);
+0 0 18px rgba(140,160,255,0.55),
+0 0 45px rgba(140,160,255,0.45),
+0 0 80px rgba(140,160,255,0.35);
 
-transform:translateY(-2px);
+background:linear-gradient(
+135deg,
+rgba(120,140,255,0.45),
+rgba(180,220,255,0.45)
+);
 }
-
 /* CONTENT */
 
 .container{
