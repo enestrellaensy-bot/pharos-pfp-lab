@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pharos Meme Lab</title>
+
+<style>
+body{
+background:black;
+color:white;
+font-family:sans-serif;
+text-align:center;
+padding-top:120px;
+}
+
+input{
+padding:10px;
+font-size:18px;
+}
+
+button{
+padding:10px 20px;
+font-size:18px;
+margin-top:10px;
+cursor:pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Pharos Meme Lab</h1>
+
+<input id="text" placeholder="Enter text">
+
+<br>
+
+<button onclick="generate()">Generate</button>
+
+<div id="result"></div>
+
+<script>
+
+function generate(){
+
+let text=document.getElementById("text").value
+
+let img=`https://api.dicebear.com/7.x/bottts/svg?seed=${text}`
+
+document.getElementById("result").innerHTML=
+`<img src="${img}" width="200">`
+
+}
+
+</script>
+
+</body>
+</html>
