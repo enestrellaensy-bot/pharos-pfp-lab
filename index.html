@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 <head>
 
@@ -72,7 +73,11 @@ object-fit:cover;
 border-radius:50%;
 
 top:50%;
-transform:translateY(-50%);
+
+/* FIXED TRANSFORM SYSTEM */
+
+--scale:1;
+transform:translateY(-50%) scale(var(--scale));
 
 box-shadow:
 0 0 14px rgba(180,220,255,0.35),
@@ -324,43 +329,17 @@ color:#cfd6e3;
 /* ANIMATIONS */
 
 @keyframes shine{
-
 0%{background-position:0%;}
 100%{background-position:300%;}
-
 }
 
 @keyframes logoPulse{
 
-0%{
+0%{ --scale:1; }
 
-transform:translateY(-50%) scale(1);
+50%{ --scale:1.08; }
 
-box-shadow:
-0 0 10px rgba(180,220,255,0.35),
-0 0 25px rgba(180,220,255,0.25);
-
-}
-
-50%{
-
-transform:translateY(-50%) scale(1.08);
-
-box-shadow:
-0 0 25px rgba(180,220,255,0.7),
-0 0 60px rgba(180,220,255,0.5);
-
-}
-
-100%{
-
-transform:translateY(-50%) scale(1);
-
-box-shadow:
-0 0 10px rgba(180,220,255,0.35),
-0 0 25px rgba(180,220,255,0.25);
-
-}
+100%{ --scale:1; }
 
 }
 
@@ -382,10 +361,8 @@ padding:14px 16px;
 }
 
 .logo{
-position:static;
 height:60px;
 width:60px;
-margin-right:10px;
 }
 
 .title{
