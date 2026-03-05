@@ -88,8 +88,7 @@ overflow:hidden;
 
 .slider{
 display:flex;
-cursor:grab;
-transition:transform 0.3s ease;
+transition:transform 0.4s ease;
 }
 
 .slide{
@@ -116,10 +115,6 @@ border-radius:12px;
 text-decoration:none;
 font-size:20px;
 display:inline-block;
-}
-
-.button a:hover{
-background:#5848ff;
 }
 
 </style>
@@ -174,42 +169,15 @@ Submit your PFP
 
 <script>
 
-const slider = document.getElementById("slider")
-let index = 0
+let slider = document.getElementById("slider")
+let slides = document.querySelectorAll(".slide")
+
 let startX = 0
-let isDown = false
+let index = 0
 
 function update(){
 slider.style.transform = "translateX(-"+index*100+"%)"
 }
-
-slider.addEventListener("mousedown", e=>{
-isDown = true
-startX = e.pageX
-})
-
-slider.addEventListener("mouseup", e=>{
-if(!isDown) return
-isDown=false
-
-let diff = e.pageX - startX
-
-if(diff > 100){
-index--
-if(index < 0) index = 0
-}
-
-if(diff < -100){
-index++
-if(index > slider.children.length-1) index = slider.children.length-1
-}
-
-update()
-})
-
-slider.addEventListener("mouseleave", ()=>{
-isDown=false
-})
 
 /* TOUCH */
 
@@ -221,15 +189,39 @@ slider.addEventListener("touchend", e=>{
 let endX = e.changedTouches[0].clientX
 let diff = endX - startX
 
-if(diff > 80){
+if(diff > 60){
 index--
-if(index < 0) index = 0
 }
 
-if(diff < -80){
+if(diff < -60){
 index++
-if(index > slider.children.length-1) index = slider.children.length-1
 }
+
+if(index < 0) index = 0
+if(index > slides.length-1) index = slides.length-1
+
+update()
+})
+
+/* MOUSE */
+
+slider.addEventListener("mousedown", e=>{
+startX = e.clientX
+})
+
+slider.addEventListener("mouseup", e=>{
+let diff = e.clientX - startX
+
+if(diff > 60){
+index--
+}
+
+if(diff < -60){
+index++
+}
+
+if(index < 0) index = 0
+if(index > slides.length-1) index = slides.length-1
 
 update()
 })
