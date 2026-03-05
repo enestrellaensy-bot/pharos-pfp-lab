@@ -304,8 +304,19 @@ right:8px;
 }
 
 .arrow{
+
 font-size:22px;
-padding:8px 12px;
+
+padding:8px 8px;   /* было широкое — стало узкое */
+
+min-width:28px;    /* чтобы кнопка не растягивалась */
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+z-index:20;
+
 }
 
 .button a{
