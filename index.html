@@ -10,10 +10,9 @@
 
 <style>
 
-/* SMOOTH SCROLL */
-
 html{
 scroll-behavior:smooth;
+overflow-x:hidden;
 }
 
 body{
@@ -25,6 +24,8 @@ background:url("fon.jpg");
 background-size:cover;
 background-position:center;
 background-attachment:fixed;
+
+overflow-x:hidden;
 }
 
 /* HEADER */
@@ -33,7 +34,6 @@ background-attachment:fixed;
 position:fixed;
 top:0;
 left:0;
-
 width:100%;
 z-index:1000;
 
@@ -44,12 +44,10 @@ border-bottom:1px solid rgba(255,255,255,0.15);
 
 .header-inner{
 position:relative;
-
 width:100%;
 display:flex;
 align-items:center;
 justify-content:flex-end;
-
 padding:26px 40px;
 box-sizing:border-box;
 }
@@ -141,30 +139,12 @@ box-shadow:
 transition:0.25s;
 }
 
-.header-buttons a:hover{
-transform:translateY(-3px);
-
-box-shadow:
-0 0 18px rgba(140,160,255,0.55),
-0 0 45px rgba(140,160,255,0.45),
-0 0 80px rgba(140,160,255,0.35);
-
-background:linear-gradient(
-135deg,
-rgba(120,140,255,0.45),
-rgba(180,220,255,0.45)
-);
-}
-
 /* CONTENT */
 
 .container{
-
 max-width:1400px;
 margin:auto;
-
 padding:140px 20px 50px 20px;
-
 text-align:center;
 }
 
@@ -172,7 +152,6 @@ text-align:center;
 
 .center-image{
 position:relative;
-
 width:100%;
 max-width:1100px;
 margin:auto;
@@ -189,6 +168,8 @@ box-shadow:
 0 0 40px rgba(255,255,255,0.35),
 0 0 90px rgba(180,220,255,0.35),
 inset 0 0 25px rgba(255,255,255,0.25);
+
+overflow:hidden;
 }
 
 /* SLIDER */
@@ -219,46 +200,26 @@ position:absolute;
 top:50%;
 transform:translateY(-50%);
 
-background:rgba(220,230,255,0.75);
+background:rgba(220,230,255,0.8);
 color:#0b1f4a;
 border:none;
 
-font-size:30px;
-padding:12px 18px;
+font-size:28px;
+padding:10px 16px;
 
 cursor:pointer;
-border-radius:14px;
-
-transition:all 0.25s ease;
+border-radius:12px;
 
 box-shadow:
-0 0 14px rgba(180,220,255,0.35),
-0 0 30px rgba(180,220,255,0.25);
-}
-
-.arrow:hover{
-transform:translateY(-50%) scale(1.08);
-
-box-shadow:
-0 0 22px rgba(180,220,255,0.55),
-0 0 50px rgba(180,220,255,0.45),
-0 0 90px rgba(180,220,255,0.35);
-}
-
-.arrow:active{
-transform:translateY(-50%) scale(0.95);
-
-box-shadow:
-0 0 12px rgba(180,220,255,0.55),
-0 0 30px rgba(180,220,255,0.45);
+0 0 14px rgba(180,220,255,0.35);
 }
 
 .left{
-left:-60px;
+left:10px;
 }
 
 .right{
-right:-60px;
+right:10px;
 }
 
 /* SUBMIT BUTTON */
@@ -273,8 +234,6 @@ text-decoration:none;
 
 font-family:'Orbitron', sans-serif;
 font-size:22px;
-font-weight:600;
-letter-spacing:1px;
 
 padding:18px 46px;
 border-radius:16px;
@@ -286,23 +245,6 @@ rgba(120,80,255,0.35)
 );
 
 border:1px solid rgba(200,220,255,0.55);
-
-backdrop-filter:blur(10px);
-
-box-shadow:
-0 0 14px rgba(160,120,255,0.45),
-0 0 40px rgba(140,100,255,0.35);
-
-transition:0.25s;
-}
-
-.button a:hover{
-transform:translateY(-3px);
-
-box-shadow:
-0 0 18px rgba(170,120,255,0.55),
-0 0 45px rgba(170,120,255,0.45),
-0 0 80px rgba(170,120,255,0.35);
 }
 
 /* FOOTER */
@@ -316,9 +258,56 @@ font-size:14px;
 letter-spacing:1px;
 
 color:#cfd6e3;
+}
 
-text-shadow:
-0 0 8px rgba(180,220,255,0.25);
+/* MOBILE */
+
+@media (max-width:768px){
+
+.header-inner{
+flex-direction:column;
+gap:12px;
+padding:18px 10px;
+}
+
+.title{
+position:static;
+transform:none;
+font-size:28px;
+text-align:center;
+}
+
+.header-buttons{
+display:flex;
+justify-content:center;
+}
+
+.container{
+padding:160px 15px 40px 15px;
+}
+
+.center-image{
+padding:15px;
+}
+
+.arrow{
+font-size:22px;
+padding:8px 12px;
+}
+
+.left{
+left:6px;
+}
+
+.right{
+right:6px;
+}
+
+.button a{
+font-size:18px;
+padding:14px 28px;
+}
+
 }
 
 /* ANIMATION */
@@ -326,94 +315,6 @@ text-shadow:
 @keyframes shine{
 0%{background-position:0%;}
 100%{background-position:300%;}
-}
-
-@media (max-width:768px){
-
-.title{
-font-size:32px;
-}
-
-.header-buttons a{
-font-size:16px;
-padding:12px 26px;
-}
-
-.button a{
-font-size:18px;
-padding:14px 34px;
-}
-
-.center-image{
-padding:20px;
-}
-
-.left{
-left:-30px;
-}
-
-.right{
-right:-30px;
-}
-
-}
-
-@media (max-width:768px){
-
-/* HEADER MOBILE */
-
-.header-inner{
-flex-direction:column;
-justify-content:center;
-padding:18px 10px;
-gap:12px;
-}
-
-.title{
-position:static;
-transform:none;
-font-size:30px;
-text-align:center;
-}
-
-.header-buttons{
-width:100%;
-display:flex;
-justify-content:center;
-}
-
-.header-buttons a{
-font-size:16px;
-padding:10px 24px;
-}
-
-/* CONTENT */
-
-.container{
-padding:160px 15px 40px 15px;
-}
-
-.center-image{
-padding:18px;
-}
-
-/* ARROWS */
-
-.left{
-left:-20px;
-}
-
-.right{
-right:-20px;
-}
-
-/* BUTTON */
-
-.button a{
-font-size:18px;
-padding:14px 28px;
-}
-
 }
 
 </style>
@@ -425,9 +326,7 @@ padding:14px 28px;
 <div class="header">
 <div class="header-inner">
 
-<div class="title">
-Pharos PFP Lab
-</div>
+<div class="title">Pharos PFP Lab</div>
 
 <div class="header-line"></div>
 
@@ -445,27 +344,14 @@ Pharos PFP Lab
 <button class="arrow left" onclick="prevSlide()">❮</button>
 
 <div class="slider-wrapper">
-
 <div class="slider" id="slider">
 
-<div class="slide">
-<img src="centr.jpg">
-</div>
-
-<div class="slide">
-<img src="centr 2.jpg">
-</div>
-
-<div class="slide">
-<img src="centr 3.jpg">
-</div>
-
-<div class="slide">
-<img src="centr 5.jpg">
-</div>
+<div class="slide"><img src="centr.jpg"></div>
+<div class="slide"><img src="centr 2.jpg"></div>
+<div class="slide"><img src="centr 3.jpg"></div>
+<div class="slide"><img src="centr 5.jpg"></div>
 
 </div>
-
 </div>
 
 <button class="arrow right" onclick="nextSlide()">❯</button>
