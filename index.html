@@ -1,58 +1,93 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Pharos Meme Lab</title>
+<title>Pharos PFP Lab</title>
 
 <style>
+
 body{
-background:black;
-color:white;
+background: linear-gradient(135deg,#000000,#0a0a23,#000000);
 font-family:sans-serif;
+color:white;
 text-align:center;
-padding-top:120px;
+padding:40px;
 }
 
-input{
+h1{
+font-size:40px;
+margin-bottom:40px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+max-width:900px;
+margin:auto;
+}
+
+.card{
+background:#111;
 padding:10px;
+border-radius:10px;
+}
+
+.card img{
+width:100%;
+border-radius:8px;
+}
+
+.button{
+margin-top:50px;
+}
+
+.button a{
+background:#6c5cff;
+color:white;
+padding:15px 30px;
+border-radius:10px;
+text-decoration:none;
 font-size:18px;
 }
 
-button{
-padding:10px 20px;
-font-size:18px;
-margin-top:10px;
-cursor:pointer;
-}
 </style>
-
 </head>
 
 <body>
 
-<h1>Pharos Meme Lab</h1>
+<h1>Pharos PFP Lab</h1>
 
-<input id="text" placeholder="Enter text">
+<div class="grid">
 
-<br>
+<div class="card">
+<img src="https://picsum.photos/300?1">
+</div>
 
-<button onclick="generate()">Generate</button>
+<div class="card">
+<img src="https://picsum.photos/300?2">
+</div>
 
-<div id="result"></div>
+<div class="card">
+<img src="https://picsum.photos/300?3">
+</div>
 
-<script>
+<div class="card">
+<img src="https://picsum.photos/300?4">
+</div>
 
-function generate(){
+<div class="card">
+<img src="https://picsum.photos/300?5">
+</div>
 
-let text=document.getElementById("text").value
+<div class="card">
+<img src="https://picsum.photos/300?6">
+</div>
 
-let img=`https://api.dicebear.com/7.x/bottts/svg?seed=${text}`
+</div>
 
-document.getElementById("result").innerHTML=
-`<img src="${img}" width="200">`
-
-}
-
-</script>
+<div class="button">
+<a href="PASTE_YOUR_FORM_LINK">Submit your PFP</a>
+</div>
 
 </body>
 </html>
