@@ -6,35 +6,50 @@
 <style>
 
 body{
-background: linear-gradient(135deg,#000000,#0a0a23,#000000);
+margin:0;
+background:#020617;
 font-family:sans-serif;
 color:white;
 text-align:center;
-padding:40px;
 }
 
-h1{
-font-size:40px;
-margin-bottom:40px;
+.header{
+background:url("header.jpg");
+background-size:cover;
+background-position:center;
+padding:120px 20px;
+}
+
+.header h1{
+font-size:48px;
+margin:0;
+background:rgba(0,0,0,0.55);
+display:inline-block;
+padding:20px 40px;
+border-radius:12px;
+}
+
+.container{
+padding:40px;
 }
 
 .grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:20px;
+gap:25px;
 max-width:900px;
 margin:auto;
 }
 
 .card{
-background:#111;
+background:#0f172a;
 padding:10px;
-border-radius:10px;
+border-radius:12px;
 }
 
 .card img{
 width:100%;
-border-radius:8px;
+border-radius:10px;
 }
 
 .button{
@@ -48,6 +63,11 @@ padding:15px 30px;
 border-radius:10px;
 text-decoration:none;
 font-size:18px;
+display:inline-block;
+}
+
+.button a:hover{
+background:#5848ff;
 }
 
 </style>
@@ -55,38 +75,44 @@ font-size:18px;
 
 <body>
 
+<div class="header">
 <h1>Pharos PFP Lab</h1>
+</div>
+
+<div class="container">
 
 <div class="grid">
 
 <div class="card">
-<img src="https://picsum.photos/300?1">
+<img src="pfp1.png">
 </div>
 
 <div class="card">
-<img src="https://picsum.photos/300?2">
+<img src="pfp2.png">
 </div>
 
 <div class="card">
-<img src="https://picsum.photos/300?3">
+<img src="pfp3.png">
 </div>
 
 <div class="card">
-<img src="https://picsum.photos/300?4">
+<img src="pfp4.png">
 </div>
 
 <div class="card">
-<img src="https://picsum.photos/300?5">
+<img src="pfp5.png">
 </div>
 
 <div class="card">
-<img src="https://picsum.photos/300?6">
+<img src="pfp6.png">
 </div>
 
 </div>
 
 <div class="button">
-<a href="PASTE_YOUR_FORM_LINK">Submit your PFP</a>
+<a href="PASTE_FORM_LINK_HERE">Submit your PFP</a>
+</div>
+
 </div>
 
 </body>
