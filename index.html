@@ -9,7 +9,6 @@ body{
 margin:0;
 font-family:sans-serif;
 color:white;
-text-align:center;
 
 background:url("fon.jpg");
 background-size:cover;
@@ -21,7 +20,11 @@ background-attachment:fixed;
 
 .header{
 width:100%;
-padding:18px 0;
+padding:16px 30px;
+
+display:flex;
+align-items:center;
+justify-content:space-between;
 
 background:rgba(10,25,60,0.45);
 backdrop-filter:blur(10px);
@@ -29,19 +32,44 @@ backdrop-filter:blur(10px);
 border-bottom:1px solid rgba(255,255,255,0.15);
 }
 
-.header h1{
-margin:0;
-font-size:40px;
+.title{
+font-size:38px;
+font-weight:700;
 letter-spacing:1px;
+}
+
+/* КНОПКИ В ШАПКЕ */
+
+.header-buttons{
+display:flex;
+gap:14px;
+}
+
+.header-buttons a{
+background:#6c5cff;
+color:white;
+padding:10px 22px;
+border-radius:10px;
+text-decoration:none;
+font-size:16px;
+font-weight:600;
+
+transition:0.2s;
+}
+
+.header-buttons a:hover{
+background:#5848ff;
+transform:translateY(-2px);
 }
 
 /* КОНТЕНТ */
 
 .container{
 padding:50px 20px;
+text-align:center;
 }
 
-/* РАМКА АРТА */
+/* РАМКА */
 
 .center-image{
 width:100%;
@@ -68,7 +96,7 @@ border-radius:16px;
 display:block;
 }
 
-/* КНОПКА */
+/* КНОПКА SUBMIT */
 
 .button{
 margin-top:40px;
@@ -94,7 +122,23 @@ background:#5848ff;
 <body>
 
 <div class="header">
-<h1>Pharos PFP Lab</h1>
+
+<div class="title">
+Pharos PFP Lab
+</div>
+
+<div class="header-buttons">
+
+<a href="PASTE_TWITTER_LINK_HERE" target="_blank">
+Twitter
+</a>
+
+<a href="PASTE_DISCORD_LINK_HERE" target="_blank">
+Discord
+</a>
+
+</div>
+
 </div>
 
 <div class="container">
