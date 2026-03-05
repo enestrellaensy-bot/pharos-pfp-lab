@@ -76,25 +76,11 @@ background-size:300%;
 
 animation:shine 5s linear infinite;
 
-/* подсветка под текстом */
-
 text-shadow:
 0 0 10px rgba(255,255,255,0.25),
 0 0 25px rgba(180,220,255,0.35),
 0 0 55px rgba(180,220,255,0.35),
 0 8px 35px rgba(180,220,255,0.35);
-}
-
-background-size:300%;
-
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-
-animation:shine 5s linear infinite;
-
-text-shadow:
-0 0 10px rgba(255,255,255,0.25),
-0 0 25px rgba(180,220,255,0.25);
 }
 
 /* TWITTER BUTTON */
@@ -145,6 +131,7 @@ rgba(120,140,255,0.45),
 rgba(180,220,255,0.45)
 );
 }
+
 /* CONTENT */
 
 .container{
@@ -249,7 +236,7 @@ background:linear-gradient(
 135deg,
 rgba(160,120,255,0.35),
 rgba(120,80,255,0.35)
-);;
+);
 
 border:1px solid rgba(200,220,255,0.55);
 
@@ -261,6 +248,7 @@ box-shadow:
 
 transition:0.25s;
 }
+
 .button a:hover{
 
 transform:translateY(-3px);
@@ -271,16 +259,7 @@ box-shadow:
 0 0 80px rgba(170,120,255,0.35);
 }
 
-background:rgba(255,255,255,0.28);
-
-box-shadow:
-0 0 25px rgba(255,255,255,0.4),
-0 0 60px rgba(180,220,255,0.35);
-
-transform:translateY(-2px);
-}
-
-/* SHINE ANIMATION */
+/* ANIMATION */
 
 @keyframes shine{
 0%{
