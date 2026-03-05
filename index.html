@@ -46,6 +46,29 @@ padding:26px 40px;
 box-sizing:border-box;
 }
 
+  .header-line{
+
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+
+bottom:-1px;
+
+width:420px;
+height:2px;
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(180,220,255,0.8),
+transparent
+);
+
+box-shadow:
+0 0 12px rgba(180,220,255,0.6),
+0 0 30px rgba(180,220,255,0.4);
+}
+  
 /* TITLE */
 
 .title{
@@ -57,29 +80,31 @@ transform:translateX(-50%);
 font-family:'Orbitron', sans-serif;
 font-size:48px;
 font-weight:700;
-
 letter-spacing:3px;
+
+/* chrome эффект */
 
 background:linear-gradient(
 90deg,
+#9ea7b3,
+#ffffff,
 #cfd6e3,
 #ffffff,
-#aeb7c4,
-#ffffff,
-#cfd6e3
+#9ea7b3
 );
 
-background-size:300%;
+background-size:400%;
 
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 
-animation:shine 5s linear infinite;
+/* движение света */
+
+animation:shine 6s linear infinite;
 
 text-shadow:
-0 0 10px rgba(255,255,255,0.25),
-0 0 25px rgba(180,220,255,0.35),
-0 0 55px rgba(180,220,255,0.35),
+0 0 12px rgba(255,255,255,0.25),
+0 0 35px rgba(180,220,255,0.35),
 0 8px 35px rgba(180,220,255,0.35);
 }
 
@@ -282,6 +307,8 @@ background-position:300%;
 <div class="title">
 Pharos PFP Lab
 </div>
+
+<div class="header-line"></div>
 
 <div class="header-buttons">
 <a href="https://x.com/oooknorov" target="_blank">Twitter</a>
