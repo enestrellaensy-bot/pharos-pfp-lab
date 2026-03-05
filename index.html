@@ -1,8 +1,6 @@
 <!DOCTYPE html>
-
 <html>
 <head>
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
@@ -19,12 +17,10 @@ body{
 margin:0;
 font-family:sans-serif;
 color:white;
-
 background:url("fon.jpg");
 background-size:cover;
 background-position:center;
 background-attachment:fixed;
-
 overflow-x:hidden;
 }
 
@@ -36,72 +32,34 @@ top:0;
 left:0;
 width:100%;
 z-index:1000;
-
 background:rgba(10,25,60,0.45);
 backdrop-filter:blur(10px);
-
 border-bottom:1px solid rgba(255,255,255,0.15);
 }
 
 .header-inner{
 position:relative;
 width:100%;
-
 display:flex;
 align-items:center;
 justify-content:flex-end;
-
-padding:33px 40px;
+padding:26px 40px;
 box-sizing:border-box;
 }
-
-.logo-link{
-display:flex;
-align-items:center;
-cursor:pointer;
-}
-
-.logo{
-
-position:absolute;
-left:30px;
-
-height:72px;
-width:72px;
-
-object-fit:cover;
-border-radius:50%;
-
-top:50%;
-
-/* FIXED TRANSFORM SYSTEM */
-
---scale:1;
-transform:translateY(-50%) scale(var(--scale));
-
-box-shadow:
-0 0 14px rgba(180,220,255,0.35),
-0 0 34px rgba(180,220,255,0.25);
-
-animation:logoPulse 2s infinite;
-
-cursor:pointer;
-
-}
-
-/* HEADER LINE */
 
 .header-line{
 position:absolute;
 left:50%;
 transform:translateX(-50%);
 bottom:-1px;
-
 width:420px;
 height:2px;
-
-background:linear-gradient(90deg,transparent,rgba(180,220,255,0.8),transparent);
-
+background:linear-gradient(
+90deg,
+transparent,
+rgba(180,220,255,0.8),
+transparent
+);
 box-shadow:
 0 0 12px rgba(180,220,255,0.6),
 0 0 30px rgba(180,220,255,0.4);
@@ -113,59 +71,70 @@ box-shadow:
 position:absolute;
 left:50%;
 transform:translateX(-50%);
-
-font-family:'Orbitron',sans-serif;
+font-family:'Orbitron', sans-serif;
 font-size:48px;
 font-weight:700;
-
 letter-spacing:3px;
-
-background:linear-gradient(90deg,#9ea7b3,#ffffff,#cfd6e3,#ffffff,#9ea7b3);
+background:linear-gradient(
+90deg,
+#9ea7b3,
+#ffffff,
+#cfd6e3,
+#ffffff,
+#9ea7b3
+);
 background-size:400%;
-
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
-
 animation:shine 6s linear infinite;
-
 text-shadow:
 0 0 12px rgba(255,255,255,0.25),
 0 0 35px rgba(180,220,255,0.35),
 0 8px 35px rgba(180,220,255,0.35);
 }
 
-/* SOCIAL BUTTONS */
+/* TWITTER BUTTON */
 
-.header-buttons{
-display:flex;
-gap:14px;
-}
-
-.icon-btn{
-display:flex;
-align-items:center;
-justify-content:center;
-
-width:72px;
-height:72px;
-
-border-radius:16px;
-
+.header-buttons a{
 color:#eaf1ff;
-
-background:rgba(255,255,255,0.12);
-border:1px solid rgba(255,255,255,0.25);
-
+text-decoration:none;
+font-family:'Orbitron', sans-serif;
+font-size:20px;
+font-weight:600;
+letter-spacing:1px;
+padding:16px 42px;
+border-radius:18px;
+background:linear-gradient(
+135deg,
+rgba(120,140,255,0.25),
+rgba(180,220,255,0.25)
+);
+border:1px solid rgba(200,220,255,0.45);
 backdrop-filter:blur(10px);
-
+box-shadow:
+0 0 12px rgba(140,160,255,0.25),
+0 0 30px rgba(140,160,255,0.15);
 transition:0.25s;
 }
 
-.icon-btn:hover{
+.x-icon{
+display:flex;
+align-items:center;
+justify-content:center;
+width:42px;
+height:42px;
+border-radius:12px;
+color:#eaf1ff;
+background:rgba(255,255,255,0.12);
+border:1px solid rgba(255,255,255,0.25);
+backdrop-filter:blur(10px);
+transition:0.25s;
+}
+
+.x-icon:hover{
 box-shadow:
 0 0 18px rgba(140,160,255,0.55),
 0 0 45px rgba(140,160,255,0.45);
-
 transform:translateY(-2px);
 }
 
@@ -174,9 +143,7 @@ transform:translateY(-2px);
 .container{
 max-width:1400px;
 margin:auto;
-
-padding:200px 20px 50px 20px;
-
+padding:140px 20px 50px 20px;
 text-align:center;
 }
 
@@ -184,26 +151,18 @@ text-align:center;
 
 .center-image{
 position:relative;
-
 width:100%;
 max-width:1100px;
-
 margin:auto;
-
 background:rgba(255,255,255,0.20);
 border:3px solid rgba(255,255,255,0.55);
-
 padding:30px;
-
 border-radius:24px;
-
 backdrop-filter:blur(14px);
-
 box-shadow:
 0 0 40px rgba(255,255,255,0.35),
 0 0 90px rgba(180,220,255,0.35),
 inset 0 0 25px rgba(255,255,255,0.25);
-
 box-sizing:border-box;
 }
 
@@ -234,35 +193,15 @@ display:block;
 position:absolute;
 top:50%;
 transform:translateY(-50%);
-
 background:rgba(220,230,255,0.8);
 color:#0b1f4a;
-
 border:none;
-
 font-size:28px;
 padding:10px 16px;
-
 cursor:pointer;
-
 border-radius:12px;
-
 box-shadow:0 0 14px rgba(180,220,255,0.35);
-
 z-index:10;
-}
-
-.arrow:hover{
-transform:translateY(-50%) scale(1.08);
-
-box-shadow:
-0 0 22px rgba(180,220,255,0.55),
-0 0 50px rgba(180,220,255,0.45),
-0 0 90px rgba(180,220,255,0.35);
-}
-
-.arrow:active{
-transform:translateY(-50%) scale(0.95);
 }
 
 .left{
@@ -280,106 +219,56 @@ margin-top:45px;
 }
 
 .button a{
-
 color:#e8f0ff;
 text-decoration:none;
-
-font-family:'Orbitron',sans-serif;
+font-family:'Orbitron', sans-serif;
 font-size:22px;
-
 padding:18px 46px;
-
 border-radius:16px;
-
 background:linear-gradient(
 135deg,
 rgba(160,120,255,0.35),
 rgba(120,80,255,0.35)
 );
-
 border:1px solid rgba(200,220,255,0.55);
-
-transition:0.25s;
-}
-
-.button a:hover{
-
-transform:translateY(-3px);
-
-box-shadow:
-0 0 18px rgba(170,120,255,0.55),
-0 0 45px rgba(170,120,255,0.45),
-0 0 80px rgba(170,120,255,0.35);
 }
 
 /* FOOTER */
 
 .footer{
-
 margin-top:140px;
-
 text-align:center;
-
-font-family:'Orbitron',sans-serif;
+font-family:'Orbitron', sans-serif;
 font-size:14px;
-
+letter-spacing:1px;
 color:#cfd6e3;
-}
-
-/* ANIMATIONS */
-
-@keyframes shine{
-0%{background-position:0%;}
-100%{background-position:300%;}
-}
-
-@keyframes logoPulse{
-
-0%{ --scale:1; }
-
-50%{ --scale:1.08; }
-
-100%{ --scale:1; }
-
 }
 
 /* MOBILE */
 
-.icon-btn svg{
-width:22px;
-height:22px;
-}
-
 @media (max-width:768px){
 
-html,body{
-overflow-x:hidden;
-}
-
 .header-inner{
-padding:14px 16px;
-}
-
-.logo{
-height:60px;
-width:60px;
+flex-direction:column;
+gap:12px;
+padding:18px 10px;
 }
 
 .title{
 position:static;
 transform:none;
-font-size:20px;
-flex:1;
+font-size:28px;
 text-align:center;
 }
 
 .header-buttons{
-gap:10px;
+display:flex;
+justify-content:center;
 }
 
-.icon-btn{
-width:42px;
-height:42px;
+.header-buttons a{
+font-size:14px;
+padding:8px 18px;
 }
 
 .container{
@@ -390,9 +279,17 @@ padding:160px 15px 40px 15px;
 padding:15px;
 }
 
+.left{
+left:8px;
+}
+
+.right{
+right:8px;
+}
+
 .arrow{
 font-size:22px;
-padding:8px;
+padding:8px 8px;
 min-width:28px;
 display:flex;
 align-items:center;
@@ -400,23 +297,30 @@ justify-content:center;
 z-index:20;
 }
 
-.left{left:8px;}
-.right{right:8px;}
+.button a{
+font-size:18px;
+padding:14px 28px;
+}
 
 }
 
-</style>
+/* ANIMATION */
 
+@keyframes shine{
+0%{background-position:0%;}
+100%{background-position:300%;}
+}
+
+</style>
 </head>
 
 <body>
 
 <div class="header">
+
 <div class="header-inner">
 
-<a href="https://www.pharos.xyz/" target="_blank" class="logo-link">
 <img src="left.png" class="logo">
-</a>
 
 <div class="title">Pharos PFP Lab</div>
 
@@ -424,22 +328,15 @@ z-index:20;
 
 <div class="header-buttons">
 
-<a href="https://x.com/oooknorov" target="_blank" class="icon-btn">
+<a href="https://x.com/oooknorov" target="_blank" class="x-icon">
 
-<svg viewBox="0 0 24 24" fill="currentColor">
+<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
 <path d="M18.244 2H21.5L14.8 9.6L22.7 22H16.6L11.8 14.9L5.6 22H2.3L9.5 13.8L2 2H8.2L12.6 8.5L18.244 2Z"/>
 </svg>
 
 </a>
 
-<a href="https://www.notion.so/2b3a5a29708e8076a738e479b930c853?v=2b3a5a29708e80a5b030000c6ac1e780&source=copy_link" target="_blank" class="icon-btn">
-
-<img src="notion.png" style="width:22px;height:22px;object-fit:contain;">
-
-</a>
-
 </div>
-
 </div>
 </div>
 
@@ -459,7 +356,6 @@ z-index:20;
 <div class="slide"><img src="centr 5.jpg"></div>
 
 </div>
-
 </div>
 
 <button class="arrow right" onclick="nextSlide()">❯</button>
@@ -481,6 +377,7 @@ Submit your PFP
 <script>
 
 let index = 0
+
 const slider = document.getElementById("slider")
 const slides = document.querySelectorAll(".slide")
 
@@ -490,13 +387,17 @@ slider.style.transform = "translateX(-"+index*100+"%)"
 
 function nextSlide(){
 index++
-if(index >= slides.length){index = 0}
+if(index >= slides.length){
+index = 0
+}
 update()
 }
 
 function prevSlide(){
 index--
-if(index < 0){index = slides.length-1}
+if(index < 0){
+index = slides.length-1
+}
 update()
 }
 
