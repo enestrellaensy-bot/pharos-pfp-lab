@@ -20,25 +20,28 @@ background-attachment:fixed;
 
 .header{
 width:100%;
-padding:16px 30px;
+background:rgba(10,25,60,0.45);
+backdrop-filter:blur(10px);
+border-bottom:1px solid rgba(255,255,255,0.15);
+}
+
+.header-inner{
+max-width:1200px;
+margin:auto;
 
 display:flex;
 align-items:center;
 justify-content:space-between;
 
-background:rgba(10,25,60,0.45);
-backdrop-filter:blur(10px);
-
-border-bottom:1px solid rgba(255,255,255,0.15);
+padding:18px 20px;
 }
 
 .title{
 font-size:38px;
 font-weight:700;
-letter-spacing:1px;
 }
 
-/* КНОПКИ В ШАПКЕ */
+/* КНОПКИ */
 
 .header-buttons{
 display:flex;
@@ -77,7 +80,7 @@ max-width:1100px;
 margin:auto;
 
 background:rgba(255,255,255,0.20);
-border:3px solid rgba(255,255,255,0.50);
+border:3px solid rgba(255,255,255,0.55);
 
 padding:30px;
 border-radius:24px;
@@ -85,9 +88,9 @@ border-radius:24px;
 backdrop-filter:blur(14px);
 
 box-shadow:
-0 0 40px rgba(255,255,255,0.30),
-0 0 90px rgba(180,220,255,0.30),
-inset 0 0 25px rgba(255,255,255,0.20);
+0 0 40px rgba(255,255,255,0.35),
+0 0 90px rgba(180,220,255,0.35),
+inset 0 0 25px rgba(255,255,255,0.25);
 }
 
 .center-image img{
@@ -96,7 +99,7 @@ border-radius:16px;
 display:block;
 }
 
-/* КНОПКА SUBMIT */
+/* КНОПКА */
 
 .button{
 margin-top:40px;
@@ -122,23 +125,18 @@ background:#5848ff;
 <body>
 
 <div class="header">
+<div class="header-inner">
 
 <div class="title">
 Pharos PFP Lab
 </div>
 
 <div class="header-buttons">
-
-<a href="PASTE_TWITTER_LINK_HERE" target="_blank">
-Twitter
-</a>
-
-<a href="PASTE_DISCORD_LINK_HERE" target="_blank">
-Discord
-</a>
-
+<a href="PASTE_TWITTER_LINK_HERE" target="_blank">Twitter</a>
+<a href="PASTE_DISCORD_LINK_HERE" target="_blank">Discord</a>
 </div>
 
+</div>
 </div>
 
 <div class="container">
