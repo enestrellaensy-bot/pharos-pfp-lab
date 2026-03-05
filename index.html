@@ -62,8 +62,8 @@ cursor:pointer;
 position:absolute;
 left:30px;
 
-height:100px;
-width:100px;
+height:72px;
+width:72px;
 
 object-fit:cover;
 
@@ -76,10 +76,11 @@ box-shadow:
 0 0 14px rgba(180,220,255,0.35),
 0 0 34px rgba(180,220,255,0.25);
 
-transition:0.25s;
+animation:logoPulse 2s infinite;
+
+cursor:pointer;
 
 }
-
 @media (hover:hover){
 
 .logo:hover{
@@ -466,6 +467,40 @@ padding:14px 28px;
 @keyframes shine{
 0%{background-position:0%;}
 100%{background-position:300%;}
+}
+
+@keyframes logoPulse{
+
+0%{
+
+box-shadow:
+0 0 10px rgba(180,220,255,0.35),
+0 0 25px rgba(180,220,255,0.25);
+
+transform:translateY(-50%) scale(1);
+
+}
+
+50%{
+
+box-shadow:
+0 0 25px rgba(180,220,255,0.7),
+0 0 60px rgba(180,220,255,0.5);
+
+transform:translateY(-50%) scale(1.08);
+
+}
+
+100%{
+
+box-shadow:
+0 0 10px rgba(180,220,255,0.35),
+0 0 25px rgba(180,220,255,0.25);
+
+transform:translateY(-50%) scale(1);
+
+}
+
 }
 
 </style>
