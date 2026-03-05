@@ -16,7 +16,7 @@ background-position:center;
 background-attachment:fixed;
 }
 
-/* ШАПКА */
+/* HEADER */
 
 .header{
 width:100%;
@@ -41,8 +41,6 @@ font-size:38px;
 font-weight:700;
 }
 
-/* КНОПКИ */
-
 .header-buttons{
 display:flex;
 gap:14px;
@@ -56,23 +54,20 @@ border-radius:10px;
 text-decoration:none;
 font-size:16px;
 font-weight:600;
-
-transition:0.2s;
 }
 
 .header-buttons a:hover{
 background:#5848ff;
-transform:translateY(-2px);
 }
 
-/* КОНТЕНТ */
+/* CONTENT */
 
 .container{
 padding:50px 20px;
 text-align:center;
 }
 
-/* РАМКА */
+/* FRAME */
 
 .center-image{
 width:100%;
@@ -91,15 +86,59 @@ box-shadow:
 0 0 40px rgba(255,255,255,0.35),
 0 0 90px rgba(180,220,255,0.35),
 inset 0 0 25px rgba(255,255,255,0.25);
+
+position:relative;
+overflow:hidden;
 }
 
-.center-image img{
+/* SLIDER */
+
+.slider{
+display:flex;
+transition:transform 0.4s ease;
+}
+
+.slide{
+min-width:100%;
+}
+
+.slide img{
 width:100%;
 border-radius:16px;
 display:block;
 }
 
-/* КНОПКА */
+/* ARROWS */
+
+.arrow{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+
+background:rgba(0,0,0,0.5);
+color:white;
+border:none;
+
+font-size:28px;
+padding:10px 18px;
+
+cursor:pointer;
+border-radius:10px;
+}
+
+.arrow:hover{
+background:rgba(0,0,0,0.8);
+}
+
+.left{
+left:10px;
+}
+
+.right{
+right:10px;
+}
+
+/* BUTTON */
 
 .button{
 margin-top:40px;
@@ -142,7 +181,27 @@ Pharos PFP Lab
 <div class="container">
 
 <div class="center-image">
+
+<button class="arrow left" onclick="prevSlide()">❮</button>
+
+<div class="slider" id="slider">
+
+<div class="slide">
 <img src="centr.jpg">
+</div>
+
+<div class="slide">
+<img src="centr2.jpg">
+</div>
+
+<div class="slide">
+<img src="centr3.jpg">
+</div>
+
+</div>
+
+<button class="arrow right" onclick="nextSlide()">❯</button>
+
 </div>
 
 <div class="button">
@@ -152,6 +211,34 @@ Submit your PFP
 </div>
 
 </div>
+
+<script>
+
+let index = 0
+const slider = document.getElementById("slider")
+const slides = document.querySelectorAll(".slide")
+
+function update(){
+slider.style.transform = "translateX(-"+index*100+"%)"
+}
+
+function nextSlide(){
+index++
+if(index >= slides.length){
+index = 0
+}
+update()
+}
+
+function prevSlide(){
+index--
+if(index < 0){
+index = slides.length-1
+}
+update()
+}
+
+</script>
 
 </body>
 </html>
