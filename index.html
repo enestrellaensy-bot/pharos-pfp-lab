@@ -406,6 +406,80 @@ height:22px;
 
 }
 
+@media (max-width:768px){
+
+html,body{
+overflow-x:hidden;
+}
+
+.header-inner{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:14px 16px;
+}
+
+.logo{
+position:static;
+height:60px;
+width:60px;
+margin-right:10px;
+transform:none;
+}
+
+.title{
+position:static;
+transform:none;
+font-size:20px;
+flex:1;
+text-align:center;
+}
+
+.header-buttons{
+display:flex;
+gap:10px;
+}
+
+.icon-btn{
+width:42px;
+height:42px;
+}
+
+.icon-btn img,
+.icon-btn svg{
+width:22px;
+height:22px;
+}
+
+.container{
+padding:160px 15px 40px 15px;
+}
+
+.center-image{
+padding:15px;
+}
+
+/* стрелки внутрь кадра */
+.arrow{
+font-size:22px;
+padding:8px 8px;
+min-width:28px;
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:20;
+}
+
+.left{
+left:8px;
+}
+
+.right{
+right:8px;
+}
+
+}
+
 </style>
 
 </head>
