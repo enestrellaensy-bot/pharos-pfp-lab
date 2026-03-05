@@ -39,19 +39,37 @@ font-size:38px;
 font-weight:700;
 }
 
+/* HEADER BUTTONS */
+
 .header-buttons{
 display:flex;
 gap:14px;
 }
 
 .header-buttons a{
-background:#6c5cff;
 color:white;
-padding:10px 22px;
-border-radius:10px;
 text-decoration:none;
-font-size:16px;
-font-weight:600;
+
+padding:10px 22px;
+border-radius:12px;
+
+background:rgba(255,255,255,0.12);
+border:1px solid rgba(255,255,255,0.25);
+
+backdrop-filter:blur(10px);
+
+transition:0.25s;
+}
+
+.header-buttons a:hover{
+
+background:rgba(255,255,255,0.25);
+
+box-shadow:
+0 0 20px rgba(255,255,255,0.35),
+0 0 40px rgba(180,220,255,0.35);
+
+transform:translateY(-2px);
 }
 
 /* CONTENT */
@@ -123,10 +141,6 @@ cursor:pointer;
 border-radius:12px;
 }
 
-.arrow:hover{
-background:rgba(0,0,0,0.9);
-}
-
 .left{
 left:-60px;
 }
@@ -135,20 +149,38 @@ left:-60px;
 right:-60px;
 }
 
-/* BUTTON */
+/* SUBMIT BUTTON */
 
 .button{
-margin-top:40px;
+margin-top:45px;
 }
 
 .button a{
-background:#6c5cff;
+
 color:white;
-padding:16px 36px;
-border-radius:12px;
 text-decoration:none;
 font-size:20px;
-display:inline-block;
+
+padding:16px 40px;
+border-radius:16px;
+
+background:rgba(255,255,255,0.15);
+border:1px solid rgba(255,255,255,0.35);
+
+backdrop-filter:blur(12px);
+
+transition:0.25s;
+}
+
+.button a:hover{
+
+background:rgba(255,255,255,0.28);
+
+box-shadow:
+0 0 25px rgba(255,255,255,0.4),
+0 0 60px rgba(180,220,255,0.35);
+
+transform:translateY(-2px);
 }
 
 </style>
@@ -165,8 +197,8 @@ Pharos PFP Lab
 </div>
 
 <div class="header-buttons">
-<a href="PASTE_TWITTER_LINK_HERE" target="_blank">Twitter</a>
-<a href="PASTE_DISCORD_LINK_HERE" target="_blank">Discord</a>
+<a href="https://x.com/oooknorov" target="_blank">Twitter</a>
+<a href="#">Discord</a>
 </div>
 
 </div>
@@ -222,17 +254,13 @@ slider.style.transform = "translateX(-"+index*100+"%)"
 
 function nextSlide(){
 index++
-if(index >= slides.length){
-index = 0
-}
+if(index >= slides.length){ index = 0 }
 update()
 }
 
 function prevSlide(){
 index--
-if(index < 0){
-index = slides.length-1
-}
+if(index < 0){ index = slides.length-1 }
 update()
 }
 
