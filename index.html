@@ -12,7 +12,6 @@
 
 html{
 scroll-behavior:smooth;
-overflow-x:hidden;
 }
 
 body{
@@ -169,7 +168,7 @@ box-shadow:
 0 0 90px rgba(180,220,255,0.35),
 inset 0 0 25px rgba(255,255,255,0.25);
 
-overflow:hidden;
+box-sizing:border-box;
 }
 
 /* SLIDER */
@@ -223,6 +222,7 @@ left:-60px;
 .right{
 right:-60px;
 }
+
 /* SUBMIT BUTTON */
 
 .button{
@@ -291,23 +291,7 @@ padding:160px 15px 40px 15px;
 padding:15px;
 }
 
-.arrow{
-font-size:22px;
-padding:8px 12px;
-}
-
-.left{
-left:6px;
-}
-
-.right{
-right:6px;
-}
-
-.button a{
-font-size:18px;
-padding:14px 28px;
-}
+/* стрелки внутрь */
 
 .left{
 left:8px;
@@ -315,6 +299,16 @@ left:8px;
 
 .right{
 right:8px;
+}
+
+.arrow{
+font-size:22px;
+padding:8px 12px;
+}
+
+.button a{
+font-size:18px;
+padding:14px 28px;
 }
 
 }
