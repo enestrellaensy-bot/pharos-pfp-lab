@@ -138,6 +138,37 @@ box-shadow:
 transition:0.25s;
 }
 
+.x-icon{
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+width:42px;
+height:42px;
+
+border-radius:12px;
+
+color:#eaf1ff;
+
+background:rgba(255,255,255,0.12);
+border:1px solid rgba(255,255,255,0.25);
+
+backdrop-filter:blur(10px);
+
+transition:0.25s;
+
+}
+
+.x-icon:hover{
+
+box-shadow:
+0 0 18px rgba(140,160,255,0.55),
+0 0 45px rgba(140,160,255,0.45);
+
+transform:translateY(-2px);
+
+}
 /* CONTENT */
 
 .container{
@@ -354,7 +385,15 @@ padding:14px 28px;
 <div class="header-line"></div>
 
 <div class="header-buttons">
-<a href="https://x.com/oooknorov" target="_blank">Twitter</a>
+
+<a href="https://x.com/oooknorov" target="_blank" class="x-icon">
+
+<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+<path d="M18.244 2H21.5L14.8 9.6L22.7 22H16.6L11.8 14.9L5.6 22H2.3L9.5 13.8L2 2H8.2L12.6 8.5L18.244 2Z"/>
+</svg>
+
+</a>
+
 </div>
 
 </div>
